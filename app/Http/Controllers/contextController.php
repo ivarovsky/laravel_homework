@@ -37,6 +37,7 @@ class contextController extends Controller
 				        'color' => 'Green'
 				    ]
 	];
+		
 		$StrategyOne = new StrategyOne($data);
 		$ContextOneExecute = new Context($StrategyOne);
 		$ContextOneExecute->processContext();
