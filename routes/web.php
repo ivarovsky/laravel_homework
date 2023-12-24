@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SenyaController;
+use App\Http\Controllers\contextController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,11 @@ Route::get('/', function () {
 });
 
 Route::get('/calculatedelivery',[SenyaController::class, 'main']);
+
+
+Route::get('/context',[contextController::class, 'main']);
+
+
 /*
  function () {//return view('welcome');}
 */
