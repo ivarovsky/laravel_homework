@@ -14,7 +14,7 @@ class StrategyOne implements Strategy {
             {
                 $this->string .= "{$k} - {$v} \n";  
             }
-        $this->string .= " \n_______";
+        $this->string .= "\n_______";
 
         return ["name"=>"StrategyOne.txt","string"=>$this->string];
 
