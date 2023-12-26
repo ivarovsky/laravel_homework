@@ -8,7 +8,7 @@ use App\Context\Context;
 use App\Context\Strategy;
 use App\Context\StrategyOne;
 use App\Context\StrategyTwo;
-
+use App\Context\StrategyAbstract;
 
 
 
@@ -37,7 +37,7 @@ class contextController extends Controller
 				        'color' => 'Green'
 	],
 
-	[ 
+	[
 				        'brandName' => 'Daewoo',
 				        'model' => 'anos',
 				        'modelDetails' => 'Найкраща в світі машина',
@@ -45,7 +45,7 @@ class contextController extends Controller
 				        'productionYear' => 2009,
 				        'color' => 'Green'
 	],
-	[ 
+	[
 				        'brandName' => 'Машина',
 				        'model' => 'Бош',
 				        'modelDetails' => 'Хватай в руки і #бош',
