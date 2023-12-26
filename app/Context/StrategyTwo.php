@@ -15,6 +15,6 @@ class StrategyTwo implements Strategy {
                 $this->string .= "|{$k}|{$v}| \n";  
             }
         $this->string .= "\n \n \n_______";
-        return ["name"=>"StrategyOne.txt","string"=>$this->string];
+        return ["name"=>"StrategyTwo.txt","string"=>$this->string];
     }
 }
