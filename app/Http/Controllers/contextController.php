@@ -57,12 +57,12 @@ class contextController extends Controller
 	
 		$StrategyOne = new StrategyOne();
 		$ContextOneExecute = new Context($StrategyOne);
-		$ContextOneExecute->processContext($carObject1);
+		var_dump($ContextOneExecute->processContext($carObject1));
 		echo "<hr />";
 		
 		$StrategyTwo = new StrategyTwo();
 		$ContextTwoExecute = new Context($StrategyTwo);
-		$ContextTwoExecute->processContext($carObject1);
+		var_dump($ContextTwoExecute->processContext($carObject1));
     	
     }
 }

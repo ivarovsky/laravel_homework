@@ -12,9 +12,10 @@ class StrategyTwo implements Strategy {
     
             foreach ($this->data as $k => $v) 
             {
-                $this->string .= "|{$k}|{$v}| \n";  
+                $k = mb_strtolower(implode(' ', $words = preg_split('/(?=[A-Z])/', $k, 2)));
+                $this->string .= "|{$k}|{$v}| \n";
             }
-        $this->string .= "\n_______";
+        $this->string .= "_______\n";
         return ["name"=>"StrategyTwo.txt","string"=>$this->string];
     }
 }
