@@ -19,31 +19,50 @@ class contextController extends Controller
     public function main()
     {
  
-    	$data = [
-				    [
-				        'brandName' => 'Ford',
-				        'model' => 'Mustang',
-				        'modelDetails' => 'GT rest 2',
-				        'modelYear' => 2014,
-				        'productionYear' => 2013,
-				        'color' => 'Oxford White'
-				    ],
-				    [
+    	$carObject1 = (object) [
+    [		
+    'brandName' => 'Ford',
+    'model' => 'Mustang',
+    'modelDetails' => 'GT rest 2',
+    'modelYear' => 2014,
+    'productionYear' => 2013,
+    'color' => 'Oxford White'
+	],
+	[ 
 				        'brandName' => 'BMW',
 				        'model' => '520i',
 				        'modelDetails' => 'rest',
 				        'modelYear' => 2001,
 				        'productionYear' => 2001,
 				        'color' => 'Green'
-				    ]
-	];
-		
-		$StrategyOne = new StrategyOne($data);
+	],
+
+	[ 
+				        'brandName' => 'Daewoo',
+				        'model' => 'anos',
+				        'modelDetails' => 'Найкраща в світі машина',
+				        'modelYear' => 2001,
+				        'productionYear' => 2009,
+				        'color' => 'Green'
+	],
+	[ 
+				        'brandName' => 'Машина',
+				        'model' => 'Бош',
+				        'modelDetails' => 'Хватай в руки і #бош',
+				        'modelYear' => 0001,
+				        'productionYear' => 3001,
+				        'color' => 'Black'
+	]
+];
+	
+		$StrategyOne = new StrategyOne();
 		$ContextOneExecute = new Context($StrategyOne);
-		$ContextOneExecute->processContext();
+		$ContextOneExecute->processContext($carObject1);
 		echo "<hr />";
-		$StrategyTwo = new StrategyTwo($data);
+		
+		$StrategyTwo = new StrategyTwo();
 		$ContextTwoExecute = new Context($StrategyTwo);
-		$ContextTwoExecute->processContext();
+		$ContextTwoExecute->processContext($carObject1);
+    	
     }
 }

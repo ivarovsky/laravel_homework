@@ -10,8 +10,11 @@ class Context
         $this->strategy = $strategy;
     }
 
-    public function processContext() 
+    public function processContext($data) 
     {
-        $this->strategy->execute();
+    	foreach ($data as $d) 
+    	{
+    	var_dump($this->strategy->execute((object) $d));
+    	}
     }
 }

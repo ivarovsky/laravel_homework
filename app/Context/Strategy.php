@@ -3,5 +3,5 @@
 namespace App\Context;
 
 interface Strategy {
-    public function execute();
+    public function execute(object $data);
 }

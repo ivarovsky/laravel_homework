@@ -4,21 +4,19 @@ namespace App\Context;
 
 class StrategyOne implements Strategy {
     private $data;
+    private $string;
 
-    public function __construct( array $data)
+    public function execute(object $data)
     {
-        $this->data = $data;
-        return $this;
-    }
-
-    public function execute()
-    { 
-    foreach($this->data as $d)
-        {
-            foreach ($d as $k => $v) 
+                $this->data = $data;
+    
+            foreach ($this->data as $k => $v) 
             {
-                echo "{$k} : {$v} <br />";  
+                $this->string .= "{$k} - {$v} \n";  
             }
-        }
+        $this->string .= " \n_______";
+
+        return ["name"=>"StrategyOne.txt","string"=>$this->string];
+
     }
 }
